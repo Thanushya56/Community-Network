@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Routes</title>
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/routes.css">
+  <!-- Add Google Maps API with your API key -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXRUG1mSXy7GL04q_cy8pCUCHcBpYbC6E&callback=initMap" async defer></script>
+</head>
+<body>
+  <header>
+    <h1>Safe Routes</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="routes.html" class="active">Safe Routes</a></li>
+        <li><a href="report.html">Report Incident</a></li>
+        <li><a href="safety-tips.html">Safety Tips</a></li>
+        <li><a href="emergency-contacts.html">Emergency Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Plan Your Safe Route</h2>
+    <div class="search-container">
+      <input type="text" id="searchBox" placeholder="Enter your location">
+      <button id="searchButton">Search</button>
+    </div>
+    <div id="map"></div>
+  </main>
+  
+  <script src="scripts/global.js"></script>
+  <script src="scripts/routes.js"></script>
+</body>
+</html>

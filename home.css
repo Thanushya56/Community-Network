@@ -1,0 +1,265 @@
+/* Homepage-specific Styles */
+/* Sticky Navigation Bar */
+#header {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  
+  #header.scrolled {
+    background-color: rgba(51, 51, 51, 0.9);
+  }
+  
+  /* Hero Section with Parallax Effect */
+  .hero {
+    height: 80vh;
+    background: url('https://static.vecteezy.com/system/resources/previews/007/872/840/non_2x/women-in-diveristy-landscape-background-free-vector.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    padding-right: 60px;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #ff3b2f;
+    transform: scale(1.1);
+  }
+  
+  /* About Us Section */
+  .about {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 30px;
+  }
+  
+  .about-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .about-icons .icon {
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .about-icons .icon:hover {
+    transform: translateY(-10px);
+  }
+  
+  .about-icons .icon i {
+    font-size: 2.5rem;
+    color: #ff6f61;
+  }
+  
+  .about-icons .icon p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .feature-cards .card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .feature-cards .card i {
+    font-size: 2.5rem;
+    color: #ff6f61;
+    margin-bottom: 20px;
+  }
+  
+  .feature-cards .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .feature-cards .card p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Testimonials Section with Carousel */
+  .testimonials {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    position: relative;
+  }
+  
+  .testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .testimonial-slider {
+    display: flex;
+    overflow: hidden;
+    width: 300%;
+    transition: transform 0.5s ease;
+  }
+  
+  .testimonial {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial .author {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .slider-button:hover {
+    background-color: #ff3b2f;
+  }
+  
+  .slider-button.prev {
+    left: 20px;
+  }
+  
+  .slider-button.next {
+    right: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  footer .social-media {
+    margin-bottom: 5px;
+  }
+  
+  footer .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  footer .social-media a:hover {
+    color: #ff6f61;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

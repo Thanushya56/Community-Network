@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Incident</title>
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/report.css">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <button id="darkModeToggle">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <header>
+    <h1>Report Incident</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="routes.html">Safe Routes</a></li>
+        <li><a href="report.html" class="active">Report Incident</a></li>
+        <li><a href="safety-tips.html">Safety Tips</a></li>
+        <li><a href="emergency-contacts.html">Emergency Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Report an Incident</h2>
+    <form id="incidentForm">
+      <!-- Location Field -->
+      <div class="form-group">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+        <button type="button" id="getLocationButton">
+          <i class="fas fa-map-marker-alt"></i> Use My Location
+        </button>
+        <span class="error-message" id="locationError"></span>
+      </div>
+
+      <!-- Description Field -->
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+        <span class="error-message" id="descriptionError"></span>
+      </div>
+
+      <!-- File Upload Field -->
+      <div class="form-group">
+        <label for="fileUpload">Upload Image/Video:</label>
+        <input type="file" id="fileUpload" name="fileUpload" accept="image/*, video/*">
+        <div id="filePreview"></div>
+        <span class="error-message" id="fileUploadError"></span>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <button type="submit" id="submitButton" >
+          <span id="submitText">Submit</span>
+          <div id="loadingSpinner" class="spinner" ></div>
+        </button>
+      </div>
+    </form>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Your incident has been reported successfully!</p>
+      </div>
+    </div>
+  </main>
+
+ 
+
+  <script src="scripts/global.js"></script>
+  <script src="scripts/report.js"></script>
+</body>
+</html>

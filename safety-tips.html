@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safety Tips</title>
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/tips.css">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- GSAP for Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <button id="darkModeToggle">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <header>
+    <h1>Safety Tips</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="routes.html">Safe Routes</a></li>
+        <li><a href="report.html">Report Incident</a></li>
+        <li><a href="safety-tips.html" class="active">Safety Tips</a></li>
+        <li><a href="emergency-contacts.html">Emergency Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Stay Safe with These Tips</h2>
+
+    <!-- Category Filters -->
+    <div class="category-filters">
+      <button class="filter-button active" data-category="all">All</button>
+      <button class="filter-button" data-category="general">General</button>
+      <button class="filter-button" data-category="travel">Travel</button>
+      <button class="filter-button" data-category="emergency">Emergency</button>
+    </div>
+
+    <!-- Safety Tips Grid -->
+    <div class="tips-grid" id="tipsGrid"></div>
+  </main>
+
+
+
+  <script src="scripts/global.js"></script>
+  <script src="scripts/tips.js"></script>
+</body>
+</html>
